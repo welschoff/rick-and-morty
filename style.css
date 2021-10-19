@@ -47,7 +47,7 @@ header {
 main {
   background-color: var(--color-background-main);
   color: var(--color-main-text);
-  padding: 2rem 2rem;
+  padding: 2rem;
 }
 
 .card {
