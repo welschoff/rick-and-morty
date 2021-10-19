@@ -1,6 +1,36 @@
+import { createElement } from './lib/elements';
 import './style.css';
+import { createCardComponent } from './lib/createCardComponent.js';
 
-document.querySelector('#app').innerHTML = `
-  <h1>Hello Vite!</h1>
-  <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
-`;
+function renderApp() {
+  const appElement = document.querySelector('#app');
+
+  const cardComponent = createCardComponent();
+
+  const headerElement = createElement(
+    'header',
+    {
+      className: 'header',
+    },
+    [
+      createElement('h1', {
+        textContent: 'Rick and Morty',
+      }),
+    ]
+  );
+
+  const mainElement = createElement(
+    'main',
+    {
+      className: 'main',
+    },
+    [
+      createElement('p', {
+        textContent: 'coming soon...',
+      }),
+    ]
+  );
+
+  appElement.append(headerElement, mainElement, cardComponent);
+}
+renderApp();
