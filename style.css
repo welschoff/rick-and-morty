@@ -4,6 +4,7 @@
 *::after,
 *::before {
   box-sizing: border-box;
+  margin: 0;
 }
 
 :root {
@@ -37,21 +38,15 @@ h5 {
   font-family: var(--font-family-headline);
 }
 
-header {
+.header {
   background-color: var(--color-background-header);
   color: var(--color-header-text);
   text-align: center;
   padding: 4rem 2rem;
 }
 
-main {
+.main {
   background-color: var(--color-background-main);
   color: var(--color-main-text);
   padding: 2rem 2rem;
-}
-
-.card {
-  background-color: white;
-  width: 100vw;
-  height: 100px;
 }

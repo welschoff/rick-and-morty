@@ -1,11 +1,9 @@
 import { createElement } from './lib/elements';
 import './style.css';
-import { createCardComponent } from './lib/createCardComponent.js';
+import createCharacterCard from './components/characterCard';
 
 function renderApp() {
   const appElement = document.querySelector('#app');
-
-  const cardComponent = createCardComponent();
 
   const headerElement = createElement(
     'header',
@@ -24,13 +22,9 @@ function renderApp() {
     {
       className: 'main',
     },
-    [
-      createElement('p', {
-        textContent: 'coming soon...',
-      }),
-    ]
+    [createCharacterCard()]
   );
 
-  appElement.append(headerElement, mainElement, cardComponent);
+  appElement.append(headerElement, mainElement);
 }
 renderApp();

@@ -1,0 +1,24 @@
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: white;
+  color: black;
+  width: fit-content;
+  border-radius: var(--border-radius);
+}
+
+.card img {
+  place-items: center;
+}
+
+.header {
+  margin: 1rem;
+}
+
+.location {
+  margin: 1rem;
+}
+
+.seen {
+  margin: 1rem;
+}
