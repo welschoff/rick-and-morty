@@ -22,7 +22,18 @@ function renderApp() {
     {
       className: 'main',
     },
-    [createCharacterCard()]
+    [
+      createCharacterCard({
+        name: 'Alien Morty',
+        location: 'Citadel of Ricks',
+        firstSeen: 'Close Rick-counters of the Rick Kind',
+      }),
+      createCharacterCard({
+        name: 'Alien Morty',
+        location: 'Citadel of Ricks',
+        firstSeen: 'Close Rick-counters of the Rick Kind',
+      }),
+    ]
   );
 
   appElement.append(headerElement, mainElement);
