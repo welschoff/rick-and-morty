@@ -9,6 +9,10 @@ export default function createCharacterCard({
   location,
   episode,
 }) {
+  const firstEpisode = episode[0];
+
+  const firstEpisodeElement = createElement('p', { textContent: '' });
+
   const characterCard = createElement(
     'article',
     {
@@ -59,14 +63,18 @@ export default function createCharacterCard({
               textContent: 'First seen in:',
               className: styles.descriptionTitle,
             }),
-            createElement('p', {
-              textContent: episode[0],
-            }),
+            firstEpisodeElement,
           ]
         ),
       ]),
     ]
   );
+
+  fetch(firstEpisode)
+    .then((response) => response.json())
+    .then((body) => {
+      firstEpisodeElement.textContent = body.name;
+    });
 
   return characterCard;
 }

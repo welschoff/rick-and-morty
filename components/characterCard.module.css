@@ -3,7 +3,7 @@
   margin: 1rem;
   grid-template-columns: 30% 1fr;
   font-family: var(--font-family-text);
-  background: white;
+  background: var(--color-background-header);
   color: black;
   border-radius: var(--border-radius);
   overflow: hidden;
