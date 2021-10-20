@@ -1,7 +1,14 @@
 import { createElement } from '../lib/elements';
 import styles from './characterCard.module.css';
 
-export default function createCharacterCard({ name, location, firstSeen }) {
+export default function createCharacterCard({
+  imgSrc,
+  name,
+  status,
+  race,
+  location,
+  firstSeen,
+}) {
   const characterCard = createElement(
     'article',
     {
@@ -9,7 +16,7 @@ export default function createCharacterCard({ name, location, firstSeen }) {
     },
     [
       createElement('img', {
-        src: 'https://rickandmortyapi.com/api/character/avatar/138.jpeg',
+        src: imgSrc,
       }),
 
       createElement('div', {}, [
@@ -23,7 +30,7 @@ export default function createCharacterCard({ name, location, firstSeen }) {
               textContent: name,
             }),
             createElement('p', {
-              textContent: 'Dead - Human',
+              textContent: `${status} - ${race}`,
             }),
           ]
         ),

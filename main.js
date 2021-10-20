@@ -2,6 +2,23 @@ import { createElement } from './lib/elements';
 import './style.css';
 import createCharacterCard from './components/characterCard';
 
+const characters = [
+  {
+    name: 'Alien Morty',
+    location: 'Citadel of Ricks',
+    firstSeen: 'Close Rick-counters of the Rick Kind',
+  },
+  {
+    name: 'Jerry Smith',
+    location: 'Earth (C-137)',
+    firstSeen: 'Pilot',
+  },
+];
+
+const characterCards = characters.map((character) =>
+  createCharacterCard(character)
+);
+
 function renderApp() {
   const appElement = document.querySelector('#app');
 
@@ -22,18 +39,7 @@ function renderApp() {
     {
       className: 'main',
     },
-    [
-      createCharacterCard({
-        name: 'Alien Morty',
-        location: 'Citadel of Ricks',
-        firstSeen: 'Close Rick-counters of the Rick Kind',
-      }),
-      createCharacterCard({
-        name: 'Alien Morty',
-        location: 'Citadel of Ricks',
-        firstSeen: 'Close Rick-counters of the Rick Kind',
-      }),
-    ]
+    characterCards
   );
 
   appElement.append(headerElement, mainElement);
