@@ -2,12 +2,12 @@ import { createElement } from '../lib/elements';
 import styles from './characterCard.module.css';
 
 export default function createCharacterCard({
-  imgSrc,
+  image,
   name,
   status,
-  race,
+  species,
   location,
-  firstSeen,
+  episode,
 }) {
   const characterCard = createElement(
     'article',
@@ -16,10 +16,10 @@ export default function createCharacterCard({
     },
     [
       createElement('img', {
-        src: imgSrc,
+        src: image,
       }),
 
-      createElement('div', {}, [
+      createElement('div', { className: styles.description }, [
         createElement(
           'div',
           {
@@ -30,7 +30,7 @@ export default function createCharacterCard({
               textContent: name,
             }),
             createElement('p', {
-              textContent: `${status} - ${race}`,
+              textContent: `${status} - ${species}`,
             }),
           ]
         ),
@@ -42,9 +42,10 @@ export default function createCharacterCard({
           [
             createElement('h3', {
               textContent: 'Last known location:',
+              className: styles.descriptionTitle,
             }),
             createElement('p', {
-              textContent: location,
+              textContent: location.name,
             }),
           ]
         ),
@@ -56,9 +57,10 @@ export default function createCharacterCard({
           [
             createElement('h3', {
               textContent: 'First seen in:',
+              className: styles.descriptionTitle,
             }),
             createElement('p', {
-              textContent: firstSeen,
+              textContent: episode[0],
             }),
           ]
         ),

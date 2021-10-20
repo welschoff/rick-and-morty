@@ -50,5 +50,4 @@ h5 {
   color: var(--color-main-text);
   padding: 2rem 2rem;
   display: grid;
-  grid-template-columns: 50% 50%;
 }
