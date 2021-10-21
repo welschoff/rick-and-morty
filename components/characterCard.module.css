@@ -1,12 +1,13 @@
 .card {
   display: grid;
-  margin: 1rem;
+  margin: 1.5rem;
   grid-template-columns: 30% 1fr;
   font-family: var(--font-family-text);
-  background: var(--color-background-header);
-  color: black;
+  background: var(--color-background-card);
+  color: var(--color-main-text);
   border-radius: var(--border-radius);
   overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(255, 253, 253, 0.2);
 }
 
 @media only screen and (max-width: 550px) {
@@ -26,6 +27,7 @@
 }
 
 .description {
+  padding-left: 0.5rem;
   display: grid;
   row-gap: 1rem;
 }

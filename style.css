@@ -46,8 +46,9 @@ h5 {
 }
 
 .main {
+  display: grid;
+  grid-template-columns: 50% 50%;
   background-color: var(--color-background-main);
   color: var(--color-main-text);
-  padding: 2rem 2rem;
-  display: grid;
+  padding: 1rem 1rem;
 }
